@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logophotography.png">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching header:', error));
+    </script>
+
+    <main>
+        <h1>Our Services </h1>
+        <p> At Batoul's Photography, we offer a variety of services to meet all your photography needs. Our services
+            include professional portrait photography, capturing the essence and personality of individuals, couples and
+            families. We specialize in event photography, ensuring that every important moment of your special
+            occasions, such as weddings, birthdays and corporate events, is beautifully captured. Our landscape and
+            travel photography services bring the beauty of the world to your doorstep, perfect for decorating your home
+            or office with stunning images. We also provide commercial photography services, including product and food
+            photography, to help businesses showcase their products in the best possible light. We also offer
+            personalized photo editing and retouching services to enhance your images and create perfect memories.
+            Whatever your photography needs, our team is committed to delivering exceptional quality and creativity in
+            every shoot.</p>
+    </main>
+
+    <!-- <hr id="footerLine"> -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching footer:', error));
+    </script>
+</body>
+
+</html>

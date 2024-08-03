@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/logophotography.png">
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error fetching header:', error));
+  </script>
+  <main>
+    <h1>Batool Shini</h1>
+    <section>
+      <h3>Short Biography</h3>
+      <img src="images/picturebatool.jpg" alt="Batool shini Profile Picture" width="200" height="250">
+      <p>I am a fourth year Computer Science student at <a href="https://www.birzeit.edu/en"> Birzeit University</a> ,
+        palestine ,<br> my student ID is 1210972</p>
+    </section>
+    <section>
+      <h3>Education</h3>
+      <p>1. [2019-2021] High School Education at <a
+          href="https://www.facebook.com/profile.php?id=100057589024079">Aljalazon Secondary School</a></p>
+      <p>2. [2021-2024] Still getting my BSc Degree in Computer Science from <a href="https://www.birzeit.edu/en">
+          Birzeit University</a></p>
+    </section>
+    <section>
+      <h3>Training</h3>
+      <p>I have completed various training in many Topics, such as:
+        <br>1. Problem Solving , from <a href="https://www.facebook.com/eknowledge.learn"> Knowleadge Academy </a>
+        <br>2. Image Processing , offered by <a href="https://www.coursera.org/learn/image-processing"> coursera </a>
+      </p>
+    </section>
+    <section>
+      <h3>Employment or Internship</h3>
+      <p>I havent worked at any place till know, still waiting to get my BSc Degree</p>
+    </section>
+    <section>
+      <h3>Community and Voluntary Works</h3>
+      <p>i have volunteered at Al-Bireh Municipality </p>
+    </section>
+    <section>
+      <h3>Awards and Distinctions</h3>
+      <p>I have partecipated in a local programming compition in 2018 </p>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error fetching footer:', error));
+  </script>
+</body>
+
+</html>
